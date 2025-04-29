@@ -1,2 +1,4 @@
-package org.lahirurashmika.service;public interface EmployeeReportService {
+package org.lahirurashmika.service;
+
+public interface EmployeeReportService {
 }

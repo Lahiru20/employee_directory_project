@@ -1,2 +1,4 @@
-package org.lahirurashmika.dto;public class Report {
+package org.lahirurashmika.dto;
+
+public class Report {
 }

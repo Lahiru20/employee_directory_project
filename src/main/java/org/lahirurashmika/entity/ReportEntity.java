@@ -1,2 +1,4 @@
-package org.lahirurashmika.entity;public class ReportEntity {
+package org.lahirurashmika.entity;
+
+public class ReportEntity {
 }

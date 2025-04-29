@@ -1,2 +1,4 @@
-package org.lahirurashmika.service.impl;public class EmployeeReportServiceImpl {
+package org.lahirurashmika.service.impl;
+
+public class EmployeeReportServiceImpl {
 }
