@@ -2,7 +2,6 @@ package org.lahirurashmika.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.lahirurashmika.dto.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.lahirurashmika.service.EmployeeService;
 
