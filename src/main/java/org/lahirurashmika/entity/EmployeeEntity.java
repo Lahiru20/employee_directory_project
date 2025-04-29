@@ -31,4 +31,6 @@ public class EmployeeEntity {
 
     private LocalDateTime updatedAt;
 
+    private Boolean isDeleted;
+
 }

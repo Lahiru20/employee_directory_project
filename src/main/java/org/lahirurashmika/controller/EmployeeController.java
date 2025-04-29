@@ -4,8 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.lahirurashmika.dto.Employee;
 import org.springframework.web.bind.annotation.*;
 import org.lahirurashmika.service.EmployeeService;
-
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -18,22 +16,23 @@ public class EmployeeController {
 
         @GetMapping
         public List<Employee> getAllEmployees() {
-            return new ArrayList<Employee>();
+            return employeeService.getAllEmployees();
         }
 
         @PostMapping
         public Employee createEmployee(@RequestBody Employee employee) {
-            return employee;
+            return employeeService.createEmployee(employee);
         }
 
         @PutMapping("/{id}")
         public Employee updateEmployee(@PathVariable Long id, @RequestBody Employee employee) {
-            return employee;
+            return employeeService.updateEmployee(id, employee);
         }
 
         @DeleteMapping("/{id}")
-        public void deleteEmployee(@PathVariable Long id) {
-
+        public Boolean deleteEmployee(@PathVariable Long id) {
+            return employeeService.deleteEmployee(id);
         }
+        
     }
 
