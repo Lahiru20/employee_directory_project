@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a449362-0aeb-4089-9593-cd7ae269bdef" name="Changes" comment="layers and classes are created">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/controller/EmployeeReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/dto/Report.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/entity/ReportEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/repository/ReportRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/service/EmployeeReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/service/impl/EmployeeReportServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/controller/EmployeeReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/controller/EmployeeReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/dto/Report.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/entity/ReportEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/repository/ReportRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/service/EmployeeReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/service/EmployeeReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/service/impl/EmployeeReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lahirurashmika/service/impl/EmployeeReportServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +41,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Maven.employee_directory_project [clean...].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
@@ -52,6 +53,11 @@
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.lahirurashmika.Main" />
