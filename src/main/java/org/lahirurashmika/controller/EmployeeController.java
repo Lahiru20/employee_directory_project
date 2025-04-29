@@ -34,5 +34,12 @@ public class EmployeeController {
             return employeeService.deleteEmployee(id);
         }
         
-    }
+        @GetMapping("/search")
+        public List<Employee> searchEmployees(
+                @RequestParam(required = false) String name,
+                @RequestParam(required = false) String email,
+                @RequestParam(required = false) String department) {
+            return employeeService.searchEmployees(name, email, department);
+        }
+}
 

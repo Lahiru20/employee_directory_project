@@ -22,6 +22,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll().stream()
+                .filter(entity -> !Boolean.TRUE.equals(entity.getIsDeleted())) 
                 .map(entity -> modelMapper.map(entity, Employee.class))
                 .collect(Collectors.toList());
     }
@@ -39,6 +40,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee updateEmployee(Long id, Employee employee) {
         EmployeeEntity existingEntity = employeeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Employee not found"));
+
+
+        modelMapper.typeMap(Employee.class, EmployeeEntity.class).addMappings(mapper -> {
+            mapper.skip(EmployeeEntity::setId); // note: i skipped id from mapping
+        });
+
         modelMapper.map(employee, existingEntity); 
         existingEntity.setUpdatedAt(LocalDateTime.now());
         EmployeeEntity updatedEntity = employeeRepository.save(existingEntity);
@@ -52,5 +59,16 @@ public class EmployeeServiceImpl implements EmployeeService {
         existingEntity.setIsDeleted(true);
         employeeRepository.save(existingEntity);
         return true;
+    }
+
+    @Override
+    public List<Employee> searchEmployees(String name, String email, String department) {
+        return employeeRepository.findAll().stream()
+                .filter(entity -> !Boolean.TRUE.equals(entity.getIsDeleted())) // Exclude deleted employees
+                .filter(entity -> name == null || entity.getName().toLowerCase().contains(name.toLowerCase()))
+                .filter(entity -> email == null || entity.getEmail().toLowerCase().contains(email.toLowerCase()))
+                .filter(entity -> department == null || entity.getDepartment().equalsIgnoreCase(department))
+                .map(entity -> modelMapper.map(entity, Employee.class))
+                .collect(Collectors.toList());
     }
 }

@@ -14,4 +14,5 @@ public interface EmployeeService {
 
     boolean deleteEmployee(Long id);
 
+    List<Employee> searchEmployees(String name, String email, String department);
 }
